@@ -19,6 +19,6 @@ export const businessHours = {
 export const bookedSlotsByDate: Record<string, string[]> = {
 //   "2026-04-10": ["7:00 PM", "9:00 PM"],
 //   "2026-04-12": ["5:00 PM", "10:00 PM"],
-//   "2026-04-15": ["7:00 PM", "9:00 PM"],
+//   "2026-04-15": ["7:00 PM", "9:00 PM"]
 };
 export const whatsappNumber = "50661506254";

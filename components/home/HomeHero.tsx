@@ -11,7 +11,7 @@ export default function HomeHero() {
         </p>
 
         <h1 className="max-w-4xl text-4xl leading-none sm:text-5xl md:text-7xl">
-          Magia Conciente
+          Magia Consciente
         </h1>
 
         <p className="max-w-2xl text-sm leading-7 text-white/72 sm:text-base md:text-lg">

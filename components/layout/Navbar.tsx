@@ -22,7 +22,7 @@ export default function Navbar() {
           className="text-xl tracking-[0.18em]"
           onClick={() => setIsOpen(false)}
         >
-          Magia Conciente
+          Magia Consciente
         </Link>
 
         <nav className="hidden gap-6 text-sm text-white/75 md:flex">

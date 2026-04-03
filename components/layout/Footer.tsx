@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="mt-24 border-t border-white/10">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} Magia Conciente. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} Magia Consciente. Todos los derechos reservados.</p>
 
         <div className="flex flex-wrap gap-4">
           <Link href="/terminos">Términos</Link>

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-white/10">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-[var(--muted-soft)] md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} Magia Consciente. Todos los derechos reservados.</p>
 
         <div className="flex flex-wrap gap-4">
@@ -14,6 +14,7 @@ export default function Footer() {
             rel="noreferrer"
           >
             Instagram
+            <span className="sr-only"> (se abre en una pestaña nueva)</span>
           </a>
           <a
             href="https://www.facebook.com/share/1R7c15CiZo/?mibextid=wwXIfr"
@@ -21,6 +22,7 @@ export default function Footer() {
             rel="noreferrer"
           >
             Facebook
+            <span className="sr-only"> (se abre en una pestaña nueva)</span>
           </a>
         </div>
       </div>

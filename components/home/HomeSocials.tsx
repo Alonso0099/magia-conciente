@@ -14,13 +14,16 @@ export default function HomeSocials() {
           href="https://www.instagram.com/magia_consciente?igsh=d2dzNXZhaG1udHRn&utm_source=qr"
           target="_blank"
           rel="noreferrer"
-          className="group rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-[0_0_40px_rgba(170,100,255,0.08)] transition hover:bg-white/[0.06]"
+          className="group rounded-3xl border border-white/10 bg-[var(--card)] p-8 shadow-[0_0_40px_var(--glow)] transition hover:bg-[var(--card-strong)]"
         >
-          <p className="text-xs uppercase tracking-[0.18em] text-white/45">
+          <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
             Instagram
           </p>
-          <h3 className="mt-3 text-4xl">@magia_consciente</h3>
-          <p className="mt-4 leading-7 text-white/70">
+          <h3 className="mt-3 text-4xl">
+            @magia_consciente
+            <span className="sr-only"> (se abre en una pestaña nueva)</span>
+          </h3>
+          <p className="mt-4 leading-7 text-[var(--muted)]">
             Descubre publicaciones, historias y una presencia visual alineada con la esencia mística y elegante de la marca.
           </p>
         </a>
@@ -29,13 +32,16 @@ export default function HomeSocials() {
           href="https://www.facebook.com/share/1R7c15CiZo/?mibextid=wwXIfr"
           target="_blank"
           rel="noreferrer"
-          className="group rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-[0_0_40px_rgba(170,100,255,0.08)] transition hover:bg-white/[0.06]"
+          className="group rounded-3xl border border-white/10 bg-[var(--card)] p-8 shadow-[0_0_40px_var(--glow)] transition hover:bg-[var(--card-strong)]"
         >
-          <p className="text-xs uppercase tracking-[0.18em] text-white/45">
+          <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
             Facebook
           </p>
-          <h3 className="mt-3 text-4xl">Magia Consciente</h3>
-          <p className="mt-4 leading-7 text-white/70">
+          <h3 className="mt-3 text-4xl">
+            Magia Consciente
+            <span className="sr-only"> (se abre en una pestaña nueva)</span>
+          </h3>
+          <p className="mt-4 leading-7 text-[var(--muted)]">
             Sigue la marca también en Facebook para conocer novedades, actualizaciones y contenido complementario.
           </p>
         </a>

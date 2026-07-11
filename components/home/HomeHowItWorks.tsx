@@ -31,15 +31,15 @@ export default function HomeHowItWorks() {
         {steps.map((step) => (
           <article
             key={step.number}
-            className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_40px_rgba(170,100,255,0.08)]"
+            className="rounded-3xl border border-white/10 bg-[var(--card)] p-6 shadow-[0_0_40px_var(--glow)]"
           >
-            <p className="text-xs uppercase tracking-[0.18em] text-white/45">
+            <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
               {step.number}
             </p>
 
             <h3 className="mt-3 text-3xl">{step.title}</h3>
 
-            <p className="mt-4 leading-7 text-white/70">{step.text}</p>
+            <p className="mt-4 leading-7 text-[var(--muted)]">{step.text}</p>
           </article>
         ))}
       </div>

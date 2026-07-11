@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
+import PageHero from "@/components/shared/PageHero";
 import TogglePill from "@/components/ui/TogglePill";
 import { services } from "@/data/services";
 import {
@@ -18,8 +19,6 @@ export default function AgendaPage() {
     const [selectedServiceId, setSelectedServiceId] = useState<string>("");
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
-
-    const dateInputRef = useRef<HTMLInputElement | null>(null);
 
     const selectedService = useMemo(
         () => services.find((service) => service.id === selectedServiceId),
@@ -93,20 +92,10 @@ export default function AgendaPage() {
 
   return (
     <section className="space-y-12">
-      <div className="space-y-6 text-center">
-        <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-          {copy.eyebrow}
-        </p>
-
-        <h1 className="text-5xl md:text-6xl">{copy.title}</h1>
-
-        <p className="mx-auto max-w-3xl text-base leading-7 text-white/70 md:text-lg">
-          {copy.intro}
-        </p>
-
+      <PageHero eyebrow={copy.eyebrow} title={copy.title} intro={copy.intro}>
         <div className="flex justify-center pt-2">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-xs uppercase tracking-[0.18em] text-white/50">
+            <span className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
               {copy.languageLabel}
             </span>
             <TogglePill
@@ -119,27 +108,31 @@ export default function AgendaPage() {
             />
           </div>
         </div>
-      </div>
+      </PageHero>
 
       <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_40px_rgba(170,100,255,0.08)] md:p-8">
+        <div className="rounded-3xl border border-white/10 bg-[var(--card)] p-6 shadow-[0_0_40px_var(--glow)] md:p-8">
           <div className="space-y-6">
             <div className="space-y-2">
-              <label className="block text-sm uppercase tracking-[0.18em] text-white/55">
+              <label
+                htmlFor="agenda-service"
+                className="block text-sm uppercase tracking-[0.18em] text-[var(--muted-soft)]"
+              >
                 {copy.serviceLabel}
               </label>
 
               <select
+                id="agenda-service"
                 value={selectedServiceId}
                 onChange={(event) => setSelectedServiceId(event.target.value)}
                 className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-[var(--accent)]"
               >
-                <option value="" className="bg-[#120a22]">
+                <option value="" className="bg-[var(--background-soft)]">
                   {copy.servicePlaceholder}
                 </option>
 
                 {services.map((service) => (
-                  <option key={service.id} value={service.id} className="bg-[#120a22]">
+                  <option key={service.id} value={service.id} className="bg-[var(--background-soft)]">
                     {service.name[locale]}
                   </option>
                 ))}
@@ -147,29 +140,19 @@ export default function AgendaPage() {
             </div>
 
             <div className="space-y-2">
-            <label className="block text-sm uppercase tracking-[0.18em] text-white/55">
+            <label
+                htmlFor="agenda-date"
+                className="block text-sm uppercase tracking-[0.18em] text-[var(--muted-soft)]"
+            >
                 {copy.dateLabel}
             </label>
 
-            <button
-                type="button"
-                onClick={() => {
-                if (dateInputRef.current) {
-                    if (typeof dateInputRef.current.showPicker === "function") {
-                    dateInputRef.current.showPicker();
-                    } else {
-                    dateInputRef.current.focus();
-                    dateInputRef.current.click();
-                    }
-                }
-                }}
-                className="relative w-full rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.03] px-4 py-3 text-left transition hover:border-white/20 focus:outline-none"
-            >
-                <span className="block text-xs uppercase tracking-[0.16em] text-white/40">
+            <div className="relative w-full rounded-2xl border border-white/10 bg-gradient-to-b from-[var(--card-strong)] to-[var(--card)] px-4 py-3 transition hover:border-white/20 focus-within:border-[var(--accent)]">
+                <span aria-hidden="true" className="block text-xs uppercase tracking-[0.16em] text-[var(--muted-soft)]">
                 {locale === "es" ? "Selecciona una fecha" : "Select a date"}
                 </span>
 
-                <span className="mt-1 block text-white">
+                <span aria-hidden="true" className="mt-1 block text-white">
                 {selectedDate
                     ? new Date(`${selectedDate}T00:00:00`).toLocaleDateString(
                         locale === "es" ? "es-CR" : "en-US",
@@ -185,12 +168,12 @@ export default function AgendaPage() {
                     : "Open calendar"}
                 </span>
 
-                <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-lg text-white/70">
+                <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-lg text-[var(--muted)]">
                 📅
                 </span>
 
                 <input
-                ref={dateInputRef}
+                id="agenda-date"
                 type="date"
                 value={selectedDate}
                 onChange={(event) => {
@@ -202,13 +185,11 @@ export default function AgendaPage() {
                     setSelectedTime("");
                     }
                 }}
-                className="pointer-events-none absolute inset-0 h-full w-full opacity-0"
-                tabIndex={-1}
-                aria-hidden="true"
+                className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
                 />
-            </button>
+            </div>
 
-            <p className="text-xs text-white/45">
+            <p className="text-xs text-[var(--muted-soft)]">
                 {locale === "es"
                 ? "Haz clic en cualquier parte del campo para abrir el calendario."
                 : "Click anywhere on the field to open the calendar."}
@@ -217,11 +198,11 @@ export default function AgendaPage() {
 
             <div className="space-y-3">
               <div className="flex items-center justify-between gap-4">
-                <label className="block text-sm uppercase tracking-[0.18em] text-white/55">
+                <p className="block text-sm uppercase tracking-[0.18em] text-[var(--muted-soft)]">
                   {copy.timeLabel}
-                </label>
+                </p>
 
-                <p className="text-xs text-white/45">
+                <p className="text-xs text-[var(--muted-soft)]">
                   {copy.unavailableHint}
                 </p>
               </div>
@@ -243,10 +224,10 @@ export default function AgendaPage() {
                       disabled={isBooked}
                       className={`rounded-2xl border px-4 py-3 text-sm transition ${
                         isBooked
-                          ? "cursor-not-allowed border-white/5 bg-white/[0.03] text-white/25"
+                          ? "cursor-not-allowed border-white/5 bg-[var(--card)] text-[var(--muted-soft)] line-through decoration-white/30"
                           : isSelected
                           ? "border-[var(--accent)] bg-[var(--accent)] text-black"
-                          : "border-white/10 bg-white/5 text-white/75 hover:bg-white/10"
+                          : "border-white/10 bg-white/5 text-[var(--muted)] hover:bg-white/10"
                       }`}
                     >
                       <div className="flex flex-col items-center gap-1">
@@ -271,7 +252,7 @@ export default function AgendaPage() {
                 className={`inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm transition ${
                   isFormComplete
                     ? "bg-[var(--accent)] text-black hover:opacity-90"
-                    : "cursor-not-allowed border border-white/10 bg-white/5 text-white/40"
+                    : "cursor-not-allowed border border-white/10 bg-white/5 text-[var(--muted-soft)]"
                 }`}
               >
                 {isFormComplete ? copy.reserveButton : copy.reserveDisabled}
@@ -281,17 +262,17 @@ export default function AgendaPage() {
         </div>
 
         <aside className="space-y-6">
-          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_40px_rgba(170,100,255,0.08)]">
+          <div className="rounded-3xl border border-white/10 bg-[var(--card)] p-6 shadow-[0_0_40px_var(--glow)]">
             <h2 className="text-3xl">{copy.hoursTitle}</h2>
-            <p className="mt-3 text-white/70">{businessHours[locale]}</p>
+            <p className="mt-3 text-[var(--muted)]">{businessHours[locale]}</p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_40px_rgba(170,100,255,0.08)]">
+          <div className="rounded-3xl border border-white/10 bg-[var(--card)] p-6 shadow-[0_0_40px_var(--glow)]">
             <h2 className="text-3xl">{copy.selectedSummary}</h2>
 
-            <div className="mt-5 space-y-4 text-white/75">
+            <div className="mt-5 space-y-4 text-[var(--muted)]">
               <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-white/45">
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
                   {copy.summaryService}
                 </p>
                 <p className="mt-1">
@@ -300,14 +281,14 @@ export default function AgendaPage() {
               </div>
 
               <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-white/45">
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
                   {copy.summaryDate}
                 </p>
                 <p className="mt-1">{selectedDate || "—"}</p>
               </div>
 
               <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-white/45">
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
                   {copy.summaryTime}
                 </p>
                 <p className="mt-1">{selectedTime || "—"}</p>

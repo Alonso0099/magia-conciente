@@ -5,12 +5,13 @@
   --background-soft: #120a22;
   --foreground: #f8f4ff;
   --muted: rgba(248, 244, 255, 0.72);
+  --muted-soft: rgba(248, 244, 255, 0.5);
   --border: rgba(255, 255, 255, 0.1);
   --card: rgba(255, 255, 255, 0.04);
   --card-strong: rgba(255, 255, 255, 0.07);
   --accent: #d7b56d;
   --accent-soft: #f3d9a2;
-  --glow: rgba(190, 120, 255, 0.18);
+  --glow: rgba(170, 100, 255, 0.08);
 }
 
 html {

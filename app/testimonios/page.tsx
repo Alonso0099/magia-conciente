@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import PageHero from "@/components/shared/PageHero";
 import TogglePill from "@/components/ui/TogglePill";
 import TestimonialCard from "@/components/testimonials/TestimonialCard";
 import { testimonials } from "@/data/testimonials";
@@ -29,20 +30,10 @@ export default function TestimoniosPage() {
 
   return (
     <section className="space-y-12">
-      <div className="space-y-6 text-center">
-        <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-          {copy.eyebrow}
-        </p>
-
-        <h1 className="text-5xl md:text-6xl">{copy.title}</h1>
-
-        <p className="mx-auto max-w-3xl text-base leading-7 text-white/70 md:text-lg">
-          {copy.intro}
-        </p>
-
+      <PageHero eyebrow={copy.eyebrow} title={copy.title} intro={copy.intro}>
         <div className="flex justify-center pt-2">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-xs uppercase tracking-[0.18em] text-white/50">
+            <span className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
               {copy.languageLabel}
             </span>
 
@@ -56,7 +47,7 @@ export default function TestimoniosPage() {
             />
           </div>
         </div>
-      </div>
+      </PageHero>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((testimonial) => (

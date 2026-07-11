@@ -1,5 +1,5 @@
-import Link from "next/link";
 import SectionIntro from "@/components/shared/SectionIntro";
+import ButtonLink from "@/components/ui/ButtonLink";
 import TestimonialCard from "@/components/testimonials/TestimonialCard";
 import { testimonials } from "@/data/testimonials";
 
@@ -25,12 +25,9 @@ export default function HomeTestimonialsPreview() {
       </div>
 
       <div>
-        <Link
-          href="/testimonios"
-          className="inline-flex rounded-full border border-white/12 bg-white/5 px-6 py-3 text-sm transition hover:bg-white/10"
-        >
+        <ButtonLink href="/testimonios" variant="secondary">
           Ver más testimonios
-        </Link>
+        </ButtonLink>
       </div>
     </section>
   );

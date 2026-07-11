@@ -14,7 +14,7 @@ export default function SectionIntro({
   return (
     <div className={centered ? "space-y-4 text-center" : "space-y-4"}>
       {eyebrow && (
-        <p className="text-sm uppercase tracking-[0.2em] text-white/60">
+        <p className="text-sm uppercase tracking-[0.2em] text-[var(--muted-soft)]">
           {eyebrow}
         </p>
       )}
@@ -23,7 +23,7 @@ export default function SectionIntro({
 
       {description && (
        <p
-            className={`text-sm leading-7 text-white/70 sm:text-base md:text-lg ${
+            className={`text-sm leading-7 text-[var(--muted)] sm:text-base md:text-lg ${
             centered ? "mx-auto max-w-3xl" : "max-w-3xl"
           }`}
         >

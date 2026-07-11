@@ -13,14 +13,14 @@ export default function TestimoniosPage() {
   const copy = {
     es: {
       eyebrow: "Testimonios",
-      title: "Experiencias compartidas por quienes han confiado en Magia Conciente",
+      title: "Experiencias compartidas por quienes han confiado en Magia Consciente",
       intro:
         "Cada experiencia es distinta, pero todas nacen desde la intención de brindar claridad, acompañamiento y una atención espiritual cuidada.",
       languageLabel: "Idioma",
     },
     en: {
       eyebrow: "Testimonials",
-      title: "Experiences shared by those who have trusted Magia Conciente",
+      title: "Experiences shared by those who have trusted Magia Consciente",
       intro:
         "Each experience is different, but all are rooted in the intention to provide clarity, support, and a thoughtful spiritual experience.",
       languageLabel: "Language",

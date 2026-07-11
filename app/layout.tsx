@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Magia Conciente",
+  title: "Magia Consciente",
   description: "Lecturas de tarot y orientación espiritual",
 };
 

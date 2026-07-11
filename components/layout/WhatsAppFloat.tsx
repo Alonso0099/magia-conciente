@@ -2,7 +2,7 @@ import { whatsappNumber } from "@/data/booking";
 
 export default function WhatsAppFloat() {
   const message =
-    "Hola, me gustaría recibir más información sobre los servicios de Magia Conciente.";
+    "Hola, me gustaría recibir más información sobre los servicios de Magia Consciente.";
   const href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (

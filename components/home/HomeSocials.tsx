@@ -6,7 +6,7 @@ export default function HomeSocials() {
       <SectionIntro
         eyebrow="Redes sociales"
         title="Conecta también a través de Instagram y Facebook"
-        description="Explora contenido, novedades, publicaciones y presencia de marca en las plataformas sociales de Magia Conciente."
+        description="Explora contenido, novedades, publicaciones y presencia de marca en las plataformas sociales de Magia Consciente."
       />
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -34,7 +34,7 @@ export default function HomeSocials() {
           <p className="text-xs uppercase tracking-[0.18em] text-white/45">
             Facebook
           </p>
-          <h3 className="mt-3 text-4xl">Magia Conciente</h3>
+          <h3 className="mt-3 text-4xl">Magia Consciente</h3>
           <p className="mt-4 leading-7 text-white/70">
             Sigue la marca también en Facebook para conocer novedades, actualizaciones y contenido complementario.
           </p>

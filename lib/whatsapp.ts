@@ -13,12 +13,12 @@ export function buildWhatsAppMessage({
 }: BuildWhatsAppMessageParams) {
   const rawMessage =
     locale === "es"
-      ? `Hola, quiero agendar una sesión con Magia Conciente.
+      ? `Hola, quiero agendar una sesión con Magia Consciente.
 
 Servicio: ${serviceName}
 Fecha: ${date}
 Hora: ${time}`
-      : `Hello, I would like to book a session with Magia Conciente.
+      : `Hello, I would like to book a session with Magia Consciente.
 
 Service: ${serviceName}
 Date: ${date}

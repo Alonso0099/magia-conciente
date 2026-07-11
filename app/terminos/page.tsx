@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Términos y condiciones | Magia Consciente",
+  description: "Condiciones de uso y servicio de Magia Consciente.",
+};
+
 export default function TerminosPage() {
   const sections = [
     {
       title: "1. Naturaleza del servicio",
       content:
-        "Los servicios ofrecidos por Magia Conciente, incluyendo lecturas de tarot, rituales y orientación espiritual, son de carácter interpretativo, energético y espiritual. No sustituyen asesoría médica, psicológica, legal o financiera. El cliente reconoce y acepta que es el único responsable de sus decisiones y acciones.",
+        "Los servicios ofrecidos por Magia Consciente, incluyendo lecturas de tarot, rituales y orientación espiritual, son de carácter interpretativo, energético y espiritual. No sustituyen asesoría médica, psicológica, legal o financiera. El cliente reconoce y acepta que es el único responsable de sus decisiones y acciones.",
     },
     {
       title: "2. Reservas y pagos",
@@ -13,7 +20,7 @@ export default function TerminosPage() {
     {
       title: "3. Política de reembolsos",
       content:
-        "No se realizan reembolsos una vez que el servicio ha sido entregado. Sin embargo, Magia Conciente se reserva el derecho de rechazar o cancelar un servicio antes de su ejecución, en cuyo caso se procederá con un reembolso completo o reprogramación, según corresponda.",
+        "No se realizan reembolsos una vez que el servicio ha sido entregado. Sin embargo, Magia Consciente se reserva el derecho de rechazar o cancelar un servicio antes de su ejecución, en cuyo caso se procederá con un reembolso completo o reprogramación, según corresponda.",
     },
     {
       title: "4. Tiempos de respuesta",
@@ -28,7 +35,7 @@ export default function TerminosPage() {
     {
       title: "6. Confidencialidad",
       content:
-        "Toda la información compartida por el cliente será tratada de manera privada y confidencial. Magia Conciente no divulgará datos personales sin el consentimiento previo del cliente.",
+        "Toda la información compartida por el cliente será tratada de manera privada y confidencial. Magia Consciente no divulgará datos personales sin el consentimiento previo del cliente.",
     },
     {
       title: "7. Responsabilidad",
@@ -48,7 +55,7 @@ export default function TerminosPage() {
     {
       title: "10. Identidad y privacidad",
       content:
-        "La identidad personal de la practicante de Magia Conciente se mantiene de carácter privado y confidencial. No existe obligación de revelar nombre legal, información personal ni ubicación exacta. El servicio opera bajo una identidad profesional.",
+        "La identidad personal de la practicante de Magia Consciente se mantiene de carácter privado y confidencial. No existe obligación de revelar nombre legal, información personal ni ubicación exacta. El servicio opera bajo una identidad profesional.",
     },
     {
       title: "11. Acoso o comportamiento indebido",
@@ -58,7 +65,7 @@ export default function TerminosPage() {
     {
       title: "12. Modificaciones",
       content:
-        "Magia Conciente se reserva el derecho de modificar estos términos en cualquier momento, sin previo aviso.",
+        "Magia Consciente se reserva el derecho de modificar estos términos en cualquier momento, sin previo aviso.",
     },
   ];
 
@@ -74,7 +81,7 @@ export default function TerminosPage() {
         </h1>
 
         <p className="mx-auto max-w-3xl text-base leading-7 text-white/70 md:text-lg">
-          Al solicitar y pagar cualquiera de los servicios de Magia Conciente,
+          Al solicitar y pagar cualquiera de los servicios de Magia Consciente,
           el cliente confirma que ha leído, comprendido y aceptado estos términos.
         </p>
       </div>

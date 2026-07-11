@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sobre Magia Consciente",
+  description:
+    "Conoce la esencia de Magia Consciente: un espacio de guía espiritual, intuición y claridad.",
+};
+
 export default function SobrePage() {
   return (
     <section className="space-y-16">
       <div className="space-y-5 text-center">
         <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-          Sobre Magia Conciente
+          Sobre Magia Consciente
         </p>
 
         <h1 className="text-5xl md:text-6xl">
@@ -11,7 +19,7 @@ export default function SobrePage() {
         </h1>
 
         <p className="mx-auto max-w-3xl text-base leading-7 text-white/70 md:text-lg">
-          Magia Conciente nace como un espacio dedicado a la orientación espiritual,
+          Magia Consciente nace como un espacio dedicado a la orientación espiritual,
           la reflexión intuitiva y el acompañamiento energético desde una experiencia
           cuidada, profesional y reservada.
         </p>
@@ -21,7 +29,7 @@ export default function SobrePage() {
         <article className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-[0_0_40px_rgba(170,100,255,0.08)]">
           <h2 className="text-4xl">La esencia de la marca</h2>
           <p className="mt-4 leading-8 text-white/72">
-            Magia Conciente está pensada para quienes buscan una experiencia espiritual
+            Magia Consciente está pensada para quienes buscan una experiencia espiritual
             seria, estética y profundamente intuitiva. Cada lectura y cada ritual se
             trabajan con intención, cuidado y enfoque personalizado, manteniendo siempre
             una atmósfera de respeto, confidencialidad y sensibilidad energética.
@@ -43,7 +51,7 @@ export default function SobrePage() {
             perspectiva y abrir espacios de reflexión profunda.
           </p>
           <p className="mt-4 leading-8 text-white/72">
-            En Magia Conciente, el tarot se integra como un canal intuitivo para explorar
+            En Magia Consciente, el tarot se integra como un canal intuitivo para explorar
             energías, bloqueos, emociones y caminos posibles, siempre desde un enfoque
             espiritual responsable y sin sustituir asesoría médica, psicológica, legal o
             financiera.

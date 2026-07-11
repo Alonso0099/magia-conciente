@@ -20,7 +20,7 @@ export default function ServiceCard({
   const duration = `${service.duration.min} - ${service.duration.max} min`;
 
   return (
-    <article className="relative rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_40px_rgba(170,100,255,0.08)]">
+    <article className="relative rounded-3xl border border-white/10 bg-[var(--card)] p-6 shadow-[0_0_40px_var(--glow)]">
       {service.featured && (
         <span className="mb-4 inline-flex rounded-full border border-[var(--accent)]/40 bg-[var(--accent)]/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-[var(--accent-soft)]">
           {locale === "es" ? "Servicio estrella" : "Featured Service"}
@@ -32,16 +32,16 @@ export default function ServiceCard({
           <h3 className="text-3xl leading-tight">
             {service.name[locale]}
           </h3>
-          <p className="mt-2 text-sm uppercase tracking-[0.18em] text-white/50">
+          <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[var(--muted-soft)]">
             {duration}
           </p>
         </div>
 
-        <p className="text-base leading-7 text-white/75">
+        <p className="text-base leading-7 text-[var(--muted)]">
           {service.shortDescription[locale]}
         </p>
 
-        <p className="text-sm leading-7 text-white/60">
+        <p className="text-sm leading-7 text-[var(--muted-soft)]">
           {service.details[locale]}
         </p>
 

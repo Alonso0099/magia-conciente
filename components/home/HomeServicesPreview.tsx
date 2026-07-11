@@ -1,5 +1,5 @@
-import Link from "next/link";
 import SectionIntro from "@/components/shared/SectionIntro";
+import ButtonLink from "@/components/ui/ButtonLink";
 import { services } from "@/data/services";
 
 export default function HomeServicesPreview() {
@@ -20,7 +20,7 @@ export default function HomeServicesPreview() {
         {previewServices.map((service) => (
           <article
             key={service.id}
-            className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_40px_rgba(170,100,255,0.08)]"
+            className="rounded-3xl border border-white/10 bg-[var(--card)] p-6 shadow-[0_0_40px_var(--glow)]"
           >
             {service.featured && (
               <span className="mb-4 inline-flex rounded-full border border-[var(--accent)]/40 bg-[var(--accent)]/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-[var(--accent-soft)]">
@@ -30,11 +30,11 @@ export default function HomeServicesPreview() {
 
             <h3 className="text-2xl leading-tight sm:text-3xl">{service.name.es}</h3>
 
-            <p className="mt-3 text-sm uppercase tracking-[0.18em] text-white/45">
+            <p className="mt-3 text-sm uppercase tracking-[0.18em] text-[var(--muted-soft)]">
               ₡{service.price.crc.toLocaleString("es-CR")} · {service.duration.min}-{service.duration.max} min
             </p>
 
-            <p className="mt-4 leading-7 text-white/70">
+            <p className="mt-4 leading-7 text-[var(--muted)]">
               {service.shortDescription.es}
             </p>
           </article>
@@ -42,12 +42,9 @@ export default function HomeServicesPreview() {
       </div>
 
       <div>
-        <Link
-          href="/servicios"
-          className="inline-flex rounded-full border border-white/12 bg-white/5 px-6 py-3 text-sm transition hover:bg-white/10"
-        >
+        <ButtonLink href="/servicios" variant="secondary">
           Ver todos los servicios
-        </Link>
+        </ButtonLink>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import ButtonLink from "@/components/ui/ButtonLink";
 
 export default function HomeHero() {
   return (
-    <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] px-5 py-16 shadow-[0_0_60px_rgba(170,100,255,0.10)] sm:px-6 md:px-10 md:py-28">
+    <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[var(--card)] px-5 py-16 shadow-[0_0_60px_rgba(170,100,255,0.10)] sm:px-6 md:px-10 md:py-28">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(190,120,255,0.12),transparent_35%)]" />
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
@@ -10,7 +10,7 @@ export default function HomeHero() {
           Magia Consciente
         </h1>
 
-        <p className="max-w-2xl text-sm leading-7 text-white/72 sm:text-base md:text-lg">
+        <p className="max-w-2xl text-sm leading-7 text-[var(--muted)] sm:text-base md:text-lg">
           Un espacio de guía espiritual, intuición y claridad para quienes buscan
           respuestas, conexión energética y una experiencia mística elegante.
         </p>

@@ -26,7 +26,7 @@ export default function Navbar() {
           Magia Consciente
         </Link>
 
-        <nav className="hidden gap-6 text-sm text-white/75 md:flex">
+        <nav className="hidden gap-6 text-sm text-[var(--muted)] md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -42,7 +42,7 @@ export default function Navbar() {
           type="button"
           aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 transition hover:bg-white/10 md:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[var(--muted)] transition hover:bg-white/10 md:hidden"
         >
           {isOpen ? "Cerrar" : "Menú"}
         </button>
@@ -50,13 +50,13 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="border-t border-white/10 bg-[#0b0714]/95 px-6 py-4 md:hidden">
-          <nav className="flex flex-col gap-4 text-sm text-white/80">
+          <nav className="flex flex-col gap-4 text-sm text-[var(--muted)]">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 transition hover:bg-white/[0.06]"
+                className="rounded-2xl border border-white/8 bg-[var(--card)] px-4 py-3 transition hover:bg-[var(--card-strong)]"
               >
                 {link.label}
               </Link>

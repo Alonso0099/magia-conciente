@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import PageHero from "@/components/shared/PageHero";
 import ServiceCard from "@/components/services/ServiceCard";
 import TogglePill from "@/components/ui/TogglePill";
 import { services } from "@/data/services";
@@ -66,20 +67,10 @@ export default function ServiciosPage() {
 
   return (
     <section className="space-y-16">
-      <div className="space-y-6 text-center">
-        <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-          {copy.eyebrow}
-        </p>
-
-        <h1 className="text-5xl md:text-6xl">{copy.title}</h1>
-
-        <p className="mx-auto max-w-3xl text-base leading-7 text-white/70 md:text-lg">
-          {copy.intro}
-        </p>
-
+      <PageHero eyebrow={copy.eyebrow} title={copy.title} intro={copy.intro}>
         <div className="flex flex-col items-center justify-center gap-4 pt-4 md:flex-row">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-xs uppercase tracking-[0.18em] text-white/50">
+            <span className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
               {copy.languageLabel}
             </span>
             <TogglePill
@@ -93,7 +84,7 @@ export default function ServiciosPage() {
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <span className="text-xs uppercase tracking-[0.18em] text-white/50">
+            <span className="text-xs uppercase tracking-[0.18em] text-[var(--muted-soft)]">
               {copy.currencyLabel}
             </span>
             <TogglePill
@@ -106,12 +97,12 @@ export default function ServiciosPage() {
             />
           </div>
         </div>
-      </div>
+      </PageHero>
 
       <section className="space-y-8">
         <div className="space-y-2">
           <h2 className="text-4xl">{copy.readingsTitle}</h2>
-          <p className="text-white/65">{copy.readingsText}</p>
+          <p className="text-[var(--muted-soft)]">{copy.readingsText}</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -129,7 +120,7 @@ export default function ServiciosPage() {
       <section className="space-y-8">
         <div className="space-y-2">
           <h2 className="text-4xl">{copy.ritualsTitle}</h2>
-          <p className="text-white/65">{copy.ritualsText}</p>
+          <p className="text-[var(--muted-soft)]">{copy.ritualsText}</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -147,7 +138,7 @@ export default function ServiciosPage() {
       <section className="space-y-8">
         <div className="space-y-2">
           <h2 className="text-4xl">{copy.combosTitle}</h2>
-          <p className="text-white/65">{copy.combosText}</p>
+          <p className="text-[var(--muted-soft)]">{copy.combosText}</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">

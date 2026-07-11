@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
   title: "Términos y condiciones | Magia Consciente",
@@ -71,29 +72,20 @@ export default function TerminosPage() {
 
   return (
     <section className="space-y-12">
-      <div className="space-y-5 text-center">
-        <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-          Términos y condiciones
-        </p>
-
-        <h1 className="text-5xl md:text-6xl">
-          Condiciones de uso y servicio
-        </h1>
-
-        <p className="mx-auto max-w-3xl text-base leading-7 text-white/70 md:text-lg">
-          Al solicitar y pagar cualquiera de los servicios de Magia Consciente,
-          el cliente confirma que ha leído, comprendido y aceptado estos términos.
-        </p>
-      </div>
+      <PageHero
+        eyebrow="Términos y condiciones"
+        title="Condiciones de uso y servicio"
+        intro="Al solicitar y pagar cualquiera de los servicios de Magia Consciente, el cliente confirma que ha leído, comprendido y aceptado estos términos."
+      />
 
       <div className="space-y-5">
         {sections.map((section) => (
           <article
             key={section.title}
-            className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_40px_rgba(170,100,255,0.08)] md:p-8"
+            className="rounded-3xl border border-white/10 bg-[var(--card)] p-6 shadow-[0_0_40px_var(--glow)] md:p-8"
           >
             <h2 className="text-3xl">{section.title}</h2>
-            <p className="mt-4 leading-8 text-white/72">{section.content}</p>
+            <p className="mt-4 leading-8 text-[var(--muted)]">{section.content}</p>
           </article>
         ))}
       </div>

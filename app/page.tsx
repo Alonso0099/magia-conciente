@@ -3,7 +3,7 @@ import HomeHero from "@/components/home/HomeHero";
 import HomeHowItWorks from "@/components/home/HomeHowItWorks";
 import HomeServicesPreview from "@/components/home/HomeServicesPreview";
 import HomeSocials from "@/components/home/HomeSocials";
-
+import HomeTestimonialsPreview from "@/components/home/HomeTestimonialsPreview";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <HomeHero />
       <HomeServicesPreview />
       <HomeHowItWorks />
+      <HomeTestimonialsPreview />
       <HomeSocials />
       <HomeFinalCta />
     </div>

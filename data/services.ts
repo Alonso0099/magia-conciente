@@ -86,8 +86,8 @@ export const services: Service[] = [
       en: "A deeper connection to your situation with oracle messages and more detailed guidance.",
     },
     details: {
-      es: "Servicio estrella de Magia Conciente. Diseñado para profundizar en tu caso de forma más intuitiva, personalizada y extensa, con enfoque espiritual y orientación clara.",
-      en: "Magia Conciente’s signature service. Designed to explore your case in a deeper, more intuitive, personalized, and detailed way, with spiritual focus and clear guidance.",
+      es: "Servicio estrella de Magia Consciente. Diseñado para profundizar en tu caso de forma más intuitiva, personalizada y extensa, con enfoque espiritual y orientación clara.",
+      en: "Magia Consciente's signature service. Designed to explore your case in a deeper, more intuitive, personalized, and detailed way, with spiritual focus and clear guidance.",
     },
     price: {
       crc: 10000,

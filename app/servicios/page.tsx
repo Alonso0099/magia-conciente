@@ -32,7 +32,7 @@ export default function ServiciosPage() {
       eyebrow: "Servicios y precios",
       title: "Experiencias espirituales para cada intención",
       intro:
-        "Cada servicio de Magia Conciente está pensado para brindar guía, claridad y acompañamiento espiritual desde una experiencia cuidada, intuitiva y profesional.",
+        "Cada servicio de Magia Consciente está pensado para brindar guía, claridad y acompañamiento espiritual desde una experiencia cuidada, intuitiva y profesional.",
       readingsTitle: "Lecturas",
       readingsText:
         "Espacios de orientación intuitiva para comprender mejor tu situación, energía y caminos posibles.",
@@ -49,7 +49,7 @@ export default function ServiciosPage() {
       eyebrow: "Services and pricing",
       title: "Spiritual experiences for every intention",
       intro:
-        "Each Magia Conciente service is designed to offer guidance, clarity, and spiritual support through a thoughtful, intuitive, and professional experience.",
+        "Each Magia Consciente service is designed to offer guidance, clarity, and spiritual support through a thoughtful, intuitive, and professional experience.",
       readingsTitle: "Readings",
       readingsText:
         "Intuitive guidance spaces to better understand your situation, energy, and possible paths ahead.",

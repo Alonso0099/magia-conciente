@@ -11,7 +11,7 @@ export default function HomeTestimonialsPreview() {
       <SectionIntro
         eyebrow="Testimonios"
         title="Experiencias compartidas por clientes"
-        description="La confianza también se construye a través de la experiencia de quienes ya han vivido una sesión con Magia Conciente."
+        description="La confianza también se construye a través de la experiencia de quienes ya han vivido una sesión con Magia Consciente."
       />
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

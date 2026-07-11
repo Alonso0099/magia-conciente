@@ -6,10 +6,6 @@ export default function HomeHero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(190,120,255,0.12),transparent_35%)]" />
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
-        <p className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70">
-          Disponible a partir del 1 de abril
-        </p>
-
         <h1 className="max-w-4xl text-4xl leading-none sm:text-5xl md:text-7xl">
           Magia Consciente
         </h1>

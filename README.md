@@ -6,7 +6,7 @@ sanar y manifestar una vida alineada.
 
 ## Estado
 
-**En progreso — etapa temprana.**
+**En progreso, etapa temprana.**
 
 El sitio público está maquetado y navegable (home, servicios, sobre,
 testimonios, agenda y términos), pero todavía no hay reservas reales: no existe

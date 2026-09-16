@@ -39,6 +39,10 @@ npm run build
 npm run lint
 ```
 
+## Autor
+
+Diseñado y dirigido por **Alonso**; construido con desarrollo asistido por IA.
+
 ## Próximos pasos
 
 - Conectar la agenda a un sistema de reservas real
